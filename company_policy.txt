@@ -1,0 +1,32 @@
+NORTHSTAR TECHNOLOGIES — EMPLOYEE POLICY HANDBOOK
+Version: 1.0 | Effective Date: 1 November 2026
+Note: Fictional company and policies created for a RAG learning project.
+
+1. WORKING HOURS
+Standard working hours are 9:00 AM to 5:30 PM, Monday through Friday, including a 30-minute unpaid lunch break. Employees are expected to work 40 hours per week. Flexible start times between 8:00 AM and 10:00 AM are allowed with manager approval.
+
+2. REMOTE WORK POLICY
+Employees may work remotely up to three days per week. They must be available during core collaboration hours, 10:00 AM to 3:00 PM. Remote work arrangements require approval from the employee's manager. Working remotely from another country requires written approval from HR and the Legal team before travel.
+
+3. ANNUAL LEAVE
+Full-time employees receive 25 days of paid annual leave per calendar year. Leave requests should be submitted through the HR portal at least 10 working days in advance whenever possible. Unused leave may be carried over up to five days into the next year, and carried-over days must be used by 31 March.
+
+4. SICK LEAVE
+Employees who are unable to work due to illness must notify their manager before 9:30 AM on the first day of absence. A medical certificate is required for absences lasting more than three consecutive calendar days. Employees should not work while on certified sick leave.
+
+5. LEARNING AND DEVELOPMENT
+Each full-time employee is eligible for a professional development budget of up to EUR 1,000 per calendar year. Eligible expenses include approved online courses, professional certifications, and job-related conferences. Reimbursement requires manager approval and a valid receipt. Unused budget does not roll over to the next year.
+
+6. EQUIPMENT AND IT SECURITY
+The company provides a work laptop to all employees. Employees must use multi-factor authentication for company accounts, lock their computers when unattended, and report suspected phishing emails to security@northstar.example within 24 hours. Company files must not be uploaded to personal cloud storage accounts.
+
+7. TRAVEL AND EXPENSES
+Business travel requires manager approval before booking. Employees may claim reasonable travel costs, including economy-class transportation, accommodation, and meals, with itemized receipts. Expense reports must be submitted within 30 days after the trip ends.
+
+8. PERFORMANCE REVIEWS
+Formal performance reviews take place twice a year, in June and December. Employees and managers discuss progress toward goals, areas for improvement, and professional development plans. Goals are documented in the HR portal.
+
+9. CONTACTS
+For leave and employment questions, contact hr@northstar.example. For IT access or hardware issues, contact it@northstar.example. For information security incidents, contact security@northstar.example.
+
+END OF DOCUMENT
