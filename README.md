@@ -1,17 +1,13 @@
 # DocuMind AI — RAG Document Assistant
 
 A document question-answering application built using Retrieval-Augmented Generation (RAG).
-
-
-## Application Demo
-
-![DocuMind AI Screenshot](screenshots/demo.png)
-
-
 ## Overview
 
 DocuMind AI retrieves relevant information from a company policy document and uses a large language model to generate answers grounded in the retrieved context.
 
+## Application Demo
+
+![DocuMind AI Screenshot](screenshots/demo.png)
 ## Tech Stack
 
 - Python
