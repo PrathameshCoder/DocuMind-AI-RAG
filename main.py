@@ -229,6 +229,86 @@ Question:
 # STEP 6: INTERACTIVE QUESTION LOOP
 # ==========================================
 
+
+# ==========================================
+# STEP 7: BUILD INDEX FOR UPLOADED DOCUMENT
+# ==========================================
+
+def build_document_index(text):
+
+    # Reuse our existing chunking function
+    document_chunks = split_text(text)
+
+    # Generate embeddings for these chunks
+    document_embeddings = model.encode(document_chunks)
+
+    # Return both as one object
+    return {
+        "chunks": document_chunks,
+        "embeddings": document_embeddings
+    }
+
+
+# ==========================================
+# STEP 8: ASK QUESTIONS ABOUT CUSTOM DOCUMENT
+# ==========================================
+
+def ask_document(question, document_index):
+
+    # Get chunks and embeddings for this document
+    document_chunks = document_index["chunks"]
+    document_embeddings = document_index["embeddings"]
+
+    # Convert question into an embedding
+    question_embedding = model.encode(question)
+
+    # Calculate similarity
+    scores = model.similarity(
+        question_embedding,
+        document_embeddings
+    )[0].numpy()
+
+    # Retrieve top 3 chunks
+    top_indices = np.argsort(scores)[::-1][:3]
+
+    # Build context using retrieved chunks
+    context = "\n\n".join(
+        f"[Chunk {index + 1}]\n{document_chunks[index]}"
+        for index in top_indices
+    )
+
+    # Create prompt
+    prompt = f"""
+You are DocuMind, an AI document assistant.
+
+Answer the user's question using ONLY
+the document context provided below.
+
+Rules:
+1. Do not invent information.
+2. If the answer is not present, say:
+   "I couldn't find that information in the document."
+3. Cite relevant chunk numbers.
+4. Keep the answer clear and concise.
+
+Document context:
+{context}
+
+Question:
+{question}
+"""
+
+    # Generate answer using OpenRouter
+    response = client.chat.completions.create(
+        model="openrouter/free",
+        messages=[
+            {"role": "user", "content": prompt}
+        ]
+    )
+
+    return response.choices[0].message.content
+
+
 if __name__ == "__main__":
     while True:
         question = input("\nAsk DocuMind (or type 'exit'): ").strip()
